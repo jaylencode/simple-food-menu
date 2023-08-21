@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --main-bg-color: #d8e2dc;
+  --bg-color-1: #b0e5d0;
+  --bg-color-2: #81b29a;
+  --bg-color-white: #fefefe;
+  --bg-color-grayish: #343a40;
+  --bg-color-black: #0a0908;
+
+ /* Box Shadow Colors */
+  --bgs-color-1: #0000001a;
+}
+
+body {
+  background: var(--main-bg-color);
+}
+
+.menu {
+  padding: 0 0.625rem 1.875rem 0.625rem; /* 0 10px 30px 10px */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr)); /* 350px */
+  grid-gap: 1.25rem 2.5rem; /* 20px 40px */
+}
+
+.heading {
+  background: var(--bg-color-1);
+  color: var(--bg-color-white);
+  margin-bottom: 1.875rem; /* 30px */
+  padding: 1.875rem 0; /* 30px 0 */
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.heading > h1 {
+  font-weight: 400;
+  font-size: 1.875rem; /* 30px */
+  letter-spacing: 0.625rem; /* 10px */
+  margin-bottom: 0.625rem; /* 10px */
+  text-transform: capitalize;
+}
+
+.heading > h3 {
+  font-weight: 600;
+  font-size: 1.375rem; /* 22px */
+  letter-spacing: 0.3125rem; /* 5px */
+  text-transform: capitalize;
+}
+
+.food_items {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border-radius: 0.9375rem; /* 15px */
+  box-shadow: 0 0 0.9375rem var(--bgs-color-1); /* 0 0 15px */
+}
+
+.food_items img {
+  position: relative;
+  width: 100%;
+  /* top left, top right, top right bottom, top bottom left */
+  border-radius: 0.9375rem 0.9375rem 0 0; /* 15px 15px 0 0 */
+}
+
+h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.details {
+  display: grid;
+  grid-template-rows: auto 1fr 3.125rem; /* 50px */
+  grid-row-gap: 0.9375rem; /* 15px */
+  padding: 1.25rem 0.625rem; /* 20px 10px */
+}
+
+.details_sub {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.details_sub > h5 {
+  font-weight: 600;
+  font-size: 1.125rem; /* 18px */
+  text-transform: capitalize;
+}
+
+.price {
+  text-align: right;
+}
+
+.details > p {
+  color: var(--bg-color-grayish);
+  font-weight: 400;
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.75rem; /* 28px */
+  align-self: stretch;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.details p::first-letter {
+  text-transform: uppercase;
+}
+
+.details > button {
+  background: var(--bg-color-2);
+  text-transform: capitalize;
+  border: none;
+  color: var(--bg-color-white);
+  font-weight: 600;
+  font-size: 1rem; /* 16px */
+  border-radius: 0.3125rem; /* 5px */
+  width: 11.25rem; /* 180px */
+}
